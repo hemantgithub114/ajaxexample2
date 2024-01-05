@@ -1,0 +1,9 @@
+<%= form_with(model: Item.new, remote: true) do |form| %>
+  <%= form.text_field :name, placeholder: 'Enter item name' %>
+  <%= form.submit 'Add Item' %>
+  
+<% end %>
+
+<div id="items-list">
+  <%= render 'items/list' %>
+</div>
