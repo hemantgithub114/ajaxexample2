@@ -7,11 +7,12 @@ class ItemsController < ApplicationController
 
 	  def create
 	    @item = Item.new(item_params)
-
+     
 	    if @item.save
 	      respond_to do |format|
 	         format.html { redirect_to root_path }
 	         format.js
+	         
 	      end
 	    else
 	      render 'index'
