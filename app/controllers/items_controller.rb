@@ -1,5 +1,7 @@
 class ItemsController < ApplicationController
 
+
+
 	  def index
 	    @items = Item.all
 	    @item = Item.new
@@ -12,7 +14,7 @@ class ItemsController < ApplicationController
 	      respond_to do |format|
 	         format.html { redirect_to root_path }
 	         format.js
-	         
+
 	      end
 	    else
 	      render 'index'
